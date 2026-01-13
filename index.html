@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 미디어 수업 홈페이지</title>
+    <title>🎓 6학년 1반 홈페이지</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Pretendard', sans-serif; background-color: #f9fafb; }
         .hero-box { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
         .card { background: white; border-radius: 2rem; box-shadow: 0 4px 25px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
-        .subject-item:hover { transform: translateX(5px); transition: all 0.2s; }
     </style>
 </head>
 <body class="text-slate-800">
 
     <nav class="flex justify-between items-center px-10 py-6 bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <div class="flex items-center gap-2">
-            <span class="text-2xl font-black text-purple-600 tracking-tight">🎓 미디어 수업 홈페이지</span>
+            <span class="text-2xl font-black text-purple-600 tracking-tight">🎓 6학년 1반 홈페이지</span>
         </div>
-        <div id="authMenu" class="flex items-center gap-6">
-            <button id="loginBtn" class="text-slate-500 font-semibold hover:text-purple-600 transition">로그인</button>
-            <button id="signupBtn" class="bg-purple-600 text-white px-6 py-2.5 rounded-2xl font-bold shadow-lg shadow-purple-200 hover:bg-purple-700 transition">회원가입</button>
+        <div id="authMenu" class="flex items-center gap-4">
+            <button id="googleLoginBtn" class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-xl font-bold shadow-sm hover:bg-slate-50 transition">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="18">
+                <span class="text-sm">구글로 로그인</span>
+            </button>
             <div id="userProfile" class="hidden flex items-center gap-3 bg-purple-50 px-4 py-2 rounded-2xl border border-purple-100">
                 <span class="text-purple-700 font-bold" id="userEmail">학생</span>
                 <button id="logoutBtn" class="text-xs text-slate-400 hover:text-red-500 underline">로그아웃</button>
@@ -33,7 +34,7 @@
         <div class="hero-box rounded-[3rem] p-16 mb-12 text-center relative overflow-hidden border border-white shadow-sm">
             <div class="relative z-10">
                 <h2 class="text-4xl font-black text-slate-900 mb-5">반가워요! 우리들의 온라인 교실입니다 🏠</h2>
-                <p class="text-lg text-slate-600 font-medium opacity-75">미디어 수업을 듣는 친구들을 위한 공간입니다.</p>
+                <p class="text-lg text-slate-600 font-medium opacity-75">구글 아이디로 간편하게 로그인해서 수업에 참여하세요.</p>
             </div>
             <div class="absolute -right-8 -bottom-8 text-[12rem] opacity-[0.08] select-none">🍎</div>
         </div>
@@ -44,12 +45,9 @@
                     <span class="text-3xl">📢</span>
                     <h3 class="text-2xl font-extrabold text-slate-800">알림장</h3>
                 </div>
-                <div class="space-y-6">
-                    <div class="p-5 bg-orange-50 rounded-2xl border border-orange-100">
-                        <p class="font-bold text-orange-700 mb-1">📅 1월 13일 (화)</p>
-                        <p class="text-slate-700 leading-relaxed">• 미디어 수업 홈페이지 로그인 테스트하기<br>• 개인별 과제 사진 갤러리에 업로드하기</p>
-                    </div>
-                    <p class="text-center text-slate-400 py-4 font-medium italic">"오늘도 즐거운 하루 보내세요! ✨"</p>
+                <div class="p-5 bg-orange-50 rounded-2xl border border-orange-100">
+                    <p class="font-bold text-orange-700 mb-1">📅 미디어 수업 안내</p>
+                    <p class="text-slate-700 leading-relaxed">• 구글 로그인 버튼이 잘 작동하는지 확인하기<br>• 로그인 후 자신의 이름이 나오는지 확인하기</p>
                 </div>
             </section>
 
@@ -58,60 +56,24 @@
                     <span class="text-3xl">📅</span>
                     <h3 class="text-2xl font-extrabold text-slate-800">오늘의 시간표</h3>
                 </div>
-                <div class="grid gap-3">
-                    <div class="subject-item flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <div class="flex items-center gap-4">
-                            <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black">1</span>
-                            <span class="text-lg font-bold">국어</span>
-                        </div>
-                        <span class="text-slate-400 text-sm">09:00 - 09:40</span>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 font-bold">
+                        <span class="text-purple-600">1교시</span> <span>미디어 리터러시</span>
                     </div>
-                    <div class="subject-item flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <div class="flex items-center gap-4">
-                            <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black">2</span>
-                            <span class="text-lg font-bold">수학</span>
-                        </div>
-                        <span class="text-slate-400 text-sm">09:50 - 10:30</span>
-                    </div>
-                    <div class="subject-item flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <div class="flex items-center gap-4">
-                            <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black">3</span>
-                            <span class="text-lg font-bold">영어</span>
-                        </div>
-                        <span class="text-slate-400 text-sm">10:50 - 11:30</span>
-                    </div>
-                    <div class="subject-item flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <div class="flex items-center gap-4">
-                            <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black">4</span>
-                            <span class="text-lg font-bold">과학</span>
-                        </div>
-                        <span class="text-slate-400 text-sm">11:40 - 12:20</span>
-                    </div>
-                    <div class="subject-item flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                        <div class="flex items-center gap-4">
-                            <span class="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center font-black">5</span>
-                            <span class="text-lg font-bold">체육</span>
-                        </div>
-                        <span class="text-slate-400 text-sm">13:10 - 13:50</span>
+                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 font-bold">
+                        <span class="text-purple-600">2교시</span> <span>구글 도구 활용법</span>
                     </div>
                 </div>
             </section>
-        </div>
-
-        <div class="mt-12 text-center">
-            <button class="group inline-flex items-center gap-3 px-10 py-5 bg-white border-2 border-slate-100 rounded-[2rem] font-black text-slate-700 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all">
-                <span class="text-2xl group-hover:scale-125 transition">🖼️</span> 
-                <span>우리반 갤러리 바로가기</span>
-            </button>
         </div>
     </main>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
-        // Firebase 설정 (사용자 정보 반영)
+        // 사용자님의 Firebase 설정 
         const firebaseConfig = {
             apiKey: "AIzaSyC3vp5MRiSh8rvh9XINxworxcMTSr55NeA",
             authDomain: "homepage-a19be.firebaseapp.com",
@@ -125,55 +87,40 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const analytics = getAnalytics(app);
+        const provider = new GoogleAuthProvider(); // 구글 인증 제공자 설정
 
-        const loginBtn = document.getElementById('loginBtn');
-        const signupBtn = document.getElementById('signupBtn');
+        const googleLoginBtn = document.getElementById('googleLoginBtn');
         const logoutBtn = document.getElementById('logoutBtn');
         const userProfile = document.getElementById('userProfile');
         const userEmailText = document.getElementById('userEmail');
 
-        // 로그인 기능
-        loginBtn.onclick = () => {
-            const email = prompt("학생용 이메일을 입력하세요:");
-            const pw = prompt("비밀번호를 입력하세요 (6자리 이상):");
-            if(email && pw) {
-                signInWithEmailAndPassword(auth, email, pw)
-                    .then(() => logEvent(analytics, 'login'))
-                    .catch(err => alert("로그인 실패: " + err.message));
-            }
-        };
-
-        // 회원가입 기능
-        signupBtn.onclick = () => {
-            const email = prompt("가입할 이메일을 입력하세요:");
-            const pw = prompt("새 비밀번호를 입력하세요:");
-            if(email && pw) {
-                createUserWithEmailAndPassword(auth, email, pw)
-                    .then(() => logEvent(analytics, 'sign_up'))
-                    .catch(err => alert("가입 실패: " + err.message));
+        // 구글 로그인 실행 함수
+        googleLoginBtn.onclick = async () => {
+            try {
+                const result = await signInWithPopup(auth, provider);
+                logEvent(analytics, 'login', { method: 'google' });
+                console.log("로그인 성공:", result.user);
+            } catch (error) {
+                alert("로그인 실패: " + error.message);
             }
         };
 
         // 로그아웃
         logoutBtn.onclick = () => signOut(auth);
 
-        // 인증 상태 감시 (실시간 UI 변경)
+        // 인증 상태 확인
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                loginBtn.classList.add('hidden');
-                signupBtn.classList.add('hidden');
+                googleLoginBtn.classList.add('hidden');
                 userProfile.classList.remove('hidden');
-                userEmailText.innerText = user.email.split('@')[0] + " 학생";
-                logEvent(analytics, 'user_session_start');
+                userEmailText.innerText = user.displayName || user.email.split('@')[0];
             } else {
-                loginBtn.classList.remove('hidden');
-                signupBtn.classList.remove('hidden');
+                googleLoginBtn.classList.remove('hidden');
                 userProfile.classList.add('hidden');
             }
         });
 
-        // 페이지 접속 통계
-        logEvent(analytics, 'page_view', { page_title: '6-1_ClassHome' });
+        logEvent(analytics, 'page_view');
     </script>
 </body>
 </html>
