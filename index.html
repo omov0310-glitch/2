@@ -3,68 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 6학년 1반 홈페이지</title>
+    <title>🎨 6학년 미디어 수업 창작소</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Pretendard', sans-serif; background-color: #f9fafb; }
-        .hero-box { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); }
-        .card { background: white; border-radius: 2rem; box-shadow: 0 4px 25px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
+        body { font-family: 'Pretendard', sans-serif; background-color: #f8fafc; }
+        .hero-section { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); }
+        .hover-card:hover { transform: translateY(-5px); transition: all 0.3s; }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="text-slate-900">
 
-    <nav class="flex justify-between items-center px-10 py-6 bg-white/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="flex items-center gap-2">
-            <span class="text-2xl font-black text-purple-600 tracking-tight">🎓 6학년 1반 홈페이지</span>
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <span class="text-3xl">🎨</span>
+            <h1 class="text-2xl font-black text-blue-600 tracking-tight">미디어 창작소</h1>
         </div>
-        <div id="authMenu" class="flex items-center gap-4">
-            <button id="googleLoginBtn" class="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-xl font-bold shadow-sm hover:bg-slate-50 transition">
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="18">
-                <span class="text-sm">구글로 로그인</span>
+        <div id="authArea">
+            <button id="googleLoginBtn" class="flex items-center gap-2 bg-white border border-slate-200 px-5 py-2.5 rounded-2xl font-bold shadow-sm hover:bg-slate-50 transition">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20">
+                <span>구글로 수업 입장</span>
             </button>
-            <div id="userProfile" class="hidden flex items-center gap-3 bg-purple-50 px-4 py-2 rounded-2xl border border-purple-100">
-                <span class="text-purple-700 font-bold" id="userEmail">학생</span>
-                <button id="logoutBtn" class="text-xs text-slate-400 hover:text-red-500 underline">로그아웃</button>
+            <div id="userProfile" class="hidden flex items-center gap-4">
+                <div class="flex flex-col items-end text-sm">
+                    <span id="userName" class="font-bold text-blue-700">학생</span>
+                    <span class="text-slate-400 text-xs">온라인 접속 중</span>
+                </div>
+                <button id="logoutBtn" class="bg-slate-100 text-slate-500 px-4 py-2 rounded-xl text-xs font-bold hover:bg-red-50 hover:text-red-500 transition">로그아웃</button>
             </div>
         </div>
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 py-10">
-        <div class="hero-box rounded-[3rem] p-16 mb-12 text-center relative overflow-hidden border border-white shadow-sm">
+        <header class="hero-section rounded-[3rem] p-16 mb-12 text-center border border-white shadow-sm relative overflow-hidden">
             <div class="relative z-10">
-                <h2 class="text-4xl font-black text-slate-900 mb-5">반가워요! 우리들의 온라인 교실입니다 🏠</h2>
-                <p class="text-lg text-slate-600 font-medium opacity-75">구글 아이디로 간편하게 로그인해서 수업에 참여하세요.</p>
+                <span class="px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-4 inline-block">2026 미디어 리터러시 프로젝트</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">반가워요! 우리의 <span class="text-blue-600">디지털 창작소</span>입니다 🏠</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    생성형 AI를 활용한 이미지 제작부터 디지털 발자국 분석까지,<br>
+                    슬기로운 미디어 시민으로 거듭나는 우리들의 공간입니다.
+                </p>
             </div>
-            <div class="absolute -right-8 -bottom-8 text-[12rem] opacity-[0.08] select-none">🍎</div>
-        </div>
+            <div class="absolute -right-10 -bottom-10 text-[15rem] opacity-[0.05] select-none">📷</div>
+        </header>
 
         <div class="grid md:grid-cols-2 gap-10">
-            <section class="card p-10">
+            <section class="bg-white rounded-[2.5rem] p-10 shadow-sm border border-slate-100 hover-card">
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="text-3xl">📢</span>
-                    <h3 class="text-2xl font-extrabold text-slate-800">알림장</h3>
+                    <span class="text-3xl">🚀</span>
+                    <h3 class="text-2xl font-black">오늘의 미디어 미션</h3>
                 </div>
-                <div class="p-5 bg-orange-50 rounded-2xl border border-orange-100">
-                    <p class="font-bold text-orange-700 mb-1">📅 미디어 수업 안내</p>
-                    <p class="text-slate-700 leading-relaxed">• 구글 로그인 버튼이 잘 작동하는지 확인하기<br>• 로그인 후 자신의 이름이 나오는지 확인하기</p>
+                <div class="space-y-4">
+                    <div class="p-6 bg-blue-50 rounded-3xl border border-blue-100">
+                        <p class="font-bold text-blue-800 mb-2">미션 1: AI와 함께 그리기</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">자신의 미래 모습을 생성형 AI로 그려보고 갤러리에 공유해 보세요.</p>
+                    </div>
+                    <div class="p-6 bg-purple-50 rounded-3xl border border-purple-100">
+                        <p class="font-bold text-purple-800 mb-2">미션 2: 디지털 발자국 분석</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">구글 애널리틱스 데이터를 보고 오늘 얼마나 많은 친구들이 접속했는지 확인해 봅시다.</p>
+                    </div>
                 </div>
             </section>
 
-            <section class="card p-10">
+            <section class="bg-white rounded-[2.5rem] p-10 shadow-sm border border-slate-100 hover-card">
                 <div class="flex items-center gap-3 mb-8">
-                    <span class="text-3xl">📅</span>
-                    <h3 class="text-2xl font-extrabold text-slate-800">오늘의 시간표</h3>
+                    <span class="text-3xl">🛠️</span>
+                    <h3 class="text-2xl font-black">미디어 학습 도구</h3>
                 </div>
-                <div class="space-y-3">
-                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 font-bold">
-                        <span class="text-purple-600">1교시</span> <span>미디어 리터러시</span>
-                    </div>
-                    <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 font-bold">
-                        <span class="text-purple-600">2교시</span> <span>구글 도구 활용법</span>
-                    </div>
+                <div class="grid gap-3">
+                    <a href="#" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:border-blue-400 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">🎨</span>
+                            <span class="font-bold text-slate-700">캔바(Canva) 디자인</span>
+                        </div>
+                        <span class="text-blue-500 opacity-0 group-hover:opacity-100">→</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:border-blue-400 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">📝</span>
+                            <span class="font-bold text-slate-700">패들렛 과제함</span>
+                        </div>
+                        <span class="text-blue-500 opacity-0 group-hover:opacity-100">→</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:bg-white hover:border-blue-400 transition group">
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">⚖️</span>
+                            <span class="font-bold text-slate-700">저작권 돋보기 교육</span>
+                        </div>
+                        <span class="text-blue-500 opacity-0 group-hover:opacity-100">→</span>
+                    </a>
                 </div>
             </section>
+        </div>
+
+        <div class="mt-12 text-center">
+            <button class="inline-flex items-center gap-3 px-12 py-5 bg-slate-900 text-white rounded-[2rem] font-black hover:bg-blue-600 hover:scale-105 transition-all shadow-xl">
+                <span>🖼️</span> 우리들의 작품 갤러리 입장
+            </button>
         </div>
     </main>
 
@@ -73,7 +109,7 @@
         import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
-        // 사용자님의 Firebase 설정 
+        // 사용자님의 Firebase 설정
         const firebaseConfig = {
             apiKey: "AIzaSyC3vp5MRiSh8rvh9XINxworxcMTSr55NeA",
             authDomain: "homepage-a19be.firebaseapp.com",
@@ -87,40 +123,40 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const analytics = getAnalytics(app);
-        const provider = new GoogleAuthProvider(); // 구글 인증 제공자 설정
+        const provider = new GoogleAuthProvider();
 
         const googleLoginBtn = document.getElementById('googleLoginBtn');
         const logoutBtn = document.getElementById('logoutBtn');
         const userProfile = document.getElementById('userProfile');
-        const userEmailText = document.getElementById('userEmail');
+        const userName = document.getElementById('userName');
 
-        // 구글 로그인 실행 함수
+        // 구글 로그인 팝업 함수
         googleLoginBtn.onclick = async () => {
             try {
                 const result = await signInWithPopup(auth, provider);
-                logEvent(analytics, 'login', { method: 'google' });
-                console.log("로그인 성공:", result.user);
+                logEvent(analytics, 'login', { method: 'google', page: 'media_lab' });
             } catch (error) {
-                alert("로그인 실패: " + error.message);
+                console.error("로그인 에러:", error);
             }
         };
 
-        // 로그아웃
         logoutBtn.onclick = () => signOut(auth);
 
-        // 인증 상태 확인
+        // 인증 상태 실시간 확인 및 UI 업데이트
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 googleLoginBtn.classList.add('hidden');
                 userProfile.classList.remove('hidden');
-                userEmailText.innerText = user.displayName || user.email.split('@')[0];
+                userName.innerText = user.displayName ? user.displayName : user.email.split('@')[0];
+                logEvent(analytics, 'user_active', { user_name: user.displayName });
             } else {
                 googleLoginBtn.classList.remove('hidden');
                 userProfile.classList.add('hidden');
             }
         });
 
-        logEvent(analytics, 'page_view');
+        // 페이지 방문 통계 전송
+        logEvent(analytics, 'page_view', { page_title: 'Media_Class_Main' });
     </script>
 </body>
 </html>
